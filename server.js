@@ -195,3 +195,7 @@ const PORT = process.env.PORT || 8080;
 server.listen(PORT, () => {
   console.log(`MCP server listening on :${PORT} (POST /mcp)`);
 });
+
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`MCP server listening on :${PORT} (POST /mcp)`);
+});
