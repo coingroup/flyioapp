@@ -1,5 +1,5 @@
-import { applyPatch } from "fast-json-patch";
-
+import pkg from "fast-json-patch";
+const { applyPatch } = pkg;
 /**
  * NOTE: The MCP SDK has evolved quickly. The key idea here is:
  * - implement MCP over Streamable HTTP at /mcp
