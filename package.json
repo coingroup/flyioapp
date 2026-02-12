@@ -1,0 +1,13 @@
+{
+  "name": "n8n-mcp-server",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "fast-json-patch": "^3.1.1"
+  }
+}
