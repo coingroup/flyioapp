@@ -1,0 +1,14 @@
+name: promotion-guard
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require staging as the source branch
+        run: |
+          if [ "${{ github.head_ref }}" != "staging" ]; then
+            echo "Pull requests to main must come from staging (got: ${{ github.head_ref }})"
+            exit 1
+          fi
